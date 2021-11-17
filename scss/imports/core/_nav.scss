@@ -1,1 +1,147 @@
 // css navigator (Menu)
+nav {
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    @include text(var(--body12-fs), pb, 30.48px, $text-cl, uppercase);
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 20px;
+    a {
+      color: $text-cl;
+      @include transition(0.3s);
+      &:hover {
+        color: $yellow-cl;
+      }
+    }
+
+    &__list {
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 5%;
+      width: 100%;
+      height: 1px;
+      background: $black-cl;
+      @include transform(translateX(-50%));
+    }
+  }
+
+  @include maxW(768px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 70%;
+    height: 100%;
+    background-color: $yellow-cl;
+    z-index: 21;
+    transform: translateX(-105%);
+    // transform: translateX(0);
+    transition: transform 0.8s cubic-bezier(0.25, 0.05, 0.1, 0.94);
+
+    &.active {
+      transform: translateX(0);
+    }
+    
+    .nav {
+      //   margin-top: 50px;
+      display: inline-block;
+      width: 100%;
+      height: auto;
+
+      a {
+        height: auto;
+        text-align: left;
+        display: block;
+        font-size: 35px;
+        text-transform: capitalize;
+        padding: 15px 0;
+        max-width: 180px;
+        margin-left: auto;
+        margin-right: auto;
+        transition: color 1s cubic-bezier(0.2, 0.6, 0.35, 1);
+        span {
+          display: inline-block;
+          color: $text-cl;
+          transition: color 1s cubic-bezier(0.2, 0.6, 0.35, 1),
+            transform 0.8s ease;
+        }
+
+        &::before {
+          counter-increment: number;
+          content: counter(number, decimal-leading-zero) ".";
+          font-family: pr;
+          font-size: 12px;
+          margin-right: 20px;
+        }
+        &:hover {
+          color: $text-cl;
+          span {
+            transform: translateX(30px);
+          }
+        }
+        &.is-not-hover {
+          color: #fffc99;
+          span {
+            color: #fffc99;
+          }
+        }
+      }
+
+      &__list {
+        display: inline-block;
+        height: auto;
+        width: 100%;
+        a {
+          padding: 15px 0;
+        }
+      }
+    }
+
+    .info {
+      display: block;
+      margin-top: 20px;
+      .info-item {
+        margin-bottom: 20px;
+        @include mid(true);
+        a {
+          @include text(var(--body14-fs), pr, 30.48px, $text-cl, uppercase);
+          position: relative;
+          &:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: $black-cl;
+            transform: scale(1);
+            height: 0.5px;
+            @include transition(0.5s ease-out);
+          }
+          &:hover {
+            &:after {
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+      ul {
+        display: flex;
+        justify-content: center;
+        li:not(:last-child) {
+          margin-right: 30px;
+        }
+      }
+    }
+  }
+}

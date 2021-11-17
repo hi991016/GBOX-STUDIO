@@ -1,1 +1,151 @@
 // css header
+header {
+  width: 100vw;
+  height: 72px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  background: $gray-cl;
+
+  .container {
+    height: 100%;
+    position: relative;
+  }
+
+  .logo {
+    width: 45px;
+    height: 50px;
+    @include mid();
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .icon-fb {
+    img {
+      width: 15px;
+      height: 22px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 15px;
+      height: 19px;
+    }
+  }
+
+  .menu {
+    @include text(
+      var(--body12-fs),
+      psb,
+      var(--body12-lh),
+      $white-cl,
+      uppercase
+    );
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0;
+    @include transition(opacity $t);
+
+    a {
+      color: $white-cl;
+      @include transition(opacity $t);
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+
+    &__list {
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+
+      .menu__logo .logo.rotate img {
+        @include transform(rotate(360deg));
+        @include transition($t);
+      }
+    }
+
+    &.enable {
+      @include transition(opacity 1.8s);
+      pointer-events: auto;
+      opacity: 1;
+    }
+  }
+
+  .btn-menu {
+    display: none;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    cursor: pointer;
+    @include transform(translateY(-50%));
+
+    span {
+      display: block;
+      transition-duration: 0.5s;
+      position: relative;
+      height: 4px;
+      width: 30px;
+      background-color: $yellow-cl;
+
+      &::before {
+        transition-duration: 0.5s;
+        position: absolute;
+        width: 30px;
+        height: 4px;
+        background-color: $yellow-cl;
+        content: "";
+        top: -10px;
+      }
+
+      &::after {
+        transition-duration: 0.5s;
+        position: absolute;
+        width: 30px;
+        height: 4px;
+        background-color: $yellow-cl;
+        content: "";
+        top: 10px;
+      }
+    }
+
+    &.open span {
+      transition-duration: 0.5s;
+      background: transparent;
+
+      &::before {
+        @include transform(rotateZ(45deg) scaleX(1.25) translate(6.5px, 6.5px));
+      }
+      &::after {
+        @include transform(rotateZ(-45deg) scaleX(1.25) translate(6px, -6px));
+      }
+    }
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    .menu {
+      display: none;
+    }
+
+    .logo {
+      display: block !important;
+    }
+
+    .icon-fb {
+      display: block !important;
+    }
+
+    .btn-menu {
+      display: block;
+    }
+  }
+}
