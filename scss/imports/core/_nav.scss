@@ -7,8 +7,9 @@ nav {
     height: 100%;
     @include text(var(--body12-fs), pb, 30.48px, $text-cl, uppercase);
     position: relative;
-    padding-top: 100px;
-    padding-bottom: 20px;
+    padding-top: 30px;
+    padding-bottom: 15px;
+
     a {
       color: $text-cl;
       @include transition(0.3s);
@@ -18,7 +19,7 @@ nav {
     }
 
     &__list {
-      width: 50%;
+      width: 55%;
       display: flex;
       align-items: center;
       justify-content: space-around;
@@ -36,7 +37,11 @@ nav {
     }
   }
 
-  @include maxW(768px) {
+  .info {
+    display: none;
+  }
+
+  @include maxW(767px) {
     position: fixed;
     top: 0;
     left: 0;
@@ -52,10 +57,10 @@ nav {
     &.active {
       transform: translateX(0);
     }
-    
+
     .nav {
-      //   margin-top: 50px;
-      display: inline-block;
+      margin-top: 50px;
+      display: inline-block !important;
       width: 100%;
       height: auto;
 
@@ -110,6 +115,7 @@ nav {
 
     .info {
       display: block;
+      // display: none;
       margin-top: 20px;
       .info-item {
         margin-bottom: 20px;
@@ -141,6 +147,36 @@ nav {
         li:not(:last-child) {
           margin-right: 30px;
         }
+
+        .icon img {
+          width: 30px;
+        }
+      }
+    }
+  }
+
+  @include maxW(360px) {
+    .nav {
+      margin-top: 20px;
+    }
+
+    .info {
+      margin-top: 0;
+    }
+  }
+
+  @include maxW(320px) {
+    .nav {
+      a {
+        font-size: 30px;
+        padding: 10px;
+      }
+    }
+
+    .info {
+      // margin-top: 0;
+      .info-item a {
+        font-size: var(--body12-fs);
       }
     }
   }

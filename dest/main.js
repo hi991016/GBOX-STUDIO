@@ -17,11 +17,13 @@ window.addEventListener("scroll", () => {
     menuFBIcon.style.display = "none";
     menuLogoSub.classList.add("rotate");
     menuLogo.style.display = "none";
+    navMenu.style.display = "none";
   } else {
     menuFBIcon.style.display = "block";
     menuHeader.classList.remove("enable");
     menuLogoSub.classList.remove("rotate");
     menuLogo.style.display = "block";
+    navMenu.style.display = "flex";
   }
 });
 

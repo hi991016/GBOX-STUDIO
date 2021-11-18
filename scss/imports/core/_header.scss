@@ -13,6 +13,10 @@ header {
     position: relative;
   }
 
+  .header {
+    height: 100%;
+  }
+
   .logo {
     width: 45px;
     height: 50px;
@@ -61,7 +65,7 @@ header {
     }
 
     &__list {
-      width: 50%;
+      width: 55%;
       display: flex;
       align-items: center;
       justify-content: space-around;
@@ -80,7 +84,8 @@ header {
   }
 
   .btn-menu {
-    display: none;
+    // display: none;
+    display: block;
     transition-duration: 0.5s;
     cursor: pointer;
     position: absolute;
@@ -88,6 +93,7 @@ header {
     left: 15px;
     cursor: pointer;
     @include transform(translateY(-50%));
+    z-index: 101;
 
     span {
       display: block;
@@ -95,14 +101,14 @@ header {
       position: relative;
       height: 4px;
       width: 30px;
-      background-color: $yellow-cl;
+      background: $yellow-cl;
 
       &::before {
         transition-duration: 0.5s;
         position: absolute;
         width: 30px;
         height: 4px;
-        background-color: $yellow-cl;
+        background: $yellow-cl;
         content: "";
         top: -10px;
       }
@@ -112,7 +118,7 @@ header {
         position: absolute;
         width: 30px;
         height: 4px;
-        background-color: $yellow-cl;
+        background: $yellow-cl;
         content: "";
         top: 10px;
       }
@@ -124,14 +130,16 @@ header {
 
       &::before {
         @include transform(rotateZ(45deg) scaleX(1.25) translate(6.5px, 6.5px));
+        background: $black-cl;
       }
       &::after {
         @include transform(rotateZ(-45deg) scaleX(1.25) translate(6px, -6px));
+        background: $black-cl;
       }
     }
   }
 
-  @media screen and (min-width: 320px) and (max-width: 767px) {
+  @include maxW(576px) {
     .menu {
       display: none;
     }
@@ -143,9 +151,21 @@ header {
     .icon-fb {
       display: block !important;
     }
+  }
 
+  @include minW(767px) {
     .btn-menu {
-      display: block;
+      display: none;
+    }
+
+    .menu__list {
+      width: 65%;
+    }
+  }
+
+  @include minW(1024px) {
+    .menu__list {
+      width: 55%;
     }
   }
 }
