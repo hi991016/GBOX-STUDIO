@@ -1,12 +1,9 @@
 // css header
 header {
   width: 100vw;
-  height: 72px;
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 100;
-  background: $gray-cl;
+  height: 140px;
+  margin-bottom: 60px;
+  counter-reset: number;
 
   .container {
     height: 100%;
@@ -14,7 +11,19 @@ header {
   }
 
   .header {
-    height: 100%;
+    &__top {
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 100;
+      background: $gray-cl;
+      height: 72px;
+      width: 100%;
+    }
+
+    &__wrap {
+      height: 100%;
+    }
   }
 
   .logo {
