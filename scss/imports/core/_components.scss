@@ -119,3 +119,21 @@ article {
 .grid {
   display: grid;
 }
+
+/* ----------------------------- CUSTOM SCROLBAR ---------------------------- */
+
+.scrollbar {
+  position: fixed;
+  top: var(--height-header);
+  left: 0;
+  z-index: 99;
+  width: 0;
+  height: 5px;
+  background-color: $yellow-cl;
+  @include transition(0.4s);
+}
+
+// hide scrollbar default
+::-webkit-scrollbar {
+  width: 0;
+}

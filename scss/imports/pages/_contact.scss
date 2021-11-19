@@ -1,0 +1,167 @@
+// CSS CONTACT PAGE
+.contactpage {
+  header {
+    margin-bottom: 0;
+    .header__bottom {
+      .nav {
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+
+  footer {
+    padding-top: 0;
+
+    .footer {
+      &__top {
+        display: none;
+      }
+
+      &__bottom {
+        padding-top: 50px;
+        &-address {
+          display: none;
+        }
+
+        &-contact {
+          display: block;
+        }
+
+        &-form {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  .contact {
+    min-height: 465px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    &__container {
+      @include mid(true);
+      flex-direction: column;
+      min-height: 465px;
+    }
+
+    &__logo {
+      margin-top: 60px;
+      margin-bottom: 10px;
+    }
+
+    &__info {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 50px;
+      @include text(
+        var(--body12-fs),
+        pr,
+        var(--body20-lh),
+        $white-cl,
+        uppercase
+      );
+
+      &-address {
+        text-align: end;
+      }
+
+      &-personal {
+        .contact__item {
+          cursor: pointer;
+
+          .email {
+            position: relative;
+
+            &::after {
+              content: "";
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 100%;
+              width: 100%;
+              height: 0.5px;
+              background-color: currentColor;
+              @include transform(scaleX(0));
+              transform-origin: left;
+              @include transition(transform 0.5s ease);
+            }
+          }
+
+          .tel {
+            span {
+              padding-left: 35px;
+            }
+          }
+
+          &:hover {
+            .email::after {
+              @include transform(scaleX(1));
+            }
+          }
+        }
+      }
+    }
+
+    &__arrow {
+      margin-top: 100px;
+      .arrow {
+        animation: down 1.2s ease-in-out infinite;
+      }
+
+      @keyframes down {
+        0% {
+          transform: translateY(0%);
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(20%);
+          opacity: 0;
+        }
+      }
+    }
+  }
+
+  @include maxW(576px) {
+    header {
+      height: var(--height-header);
+    }
+
+    footer {
+      .footer {
+        &__bottom {
+          padding-top: 0;
+
+          .copyright {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+
+    .contact {
+      background-position: 29%;
+      &__logo {
+        display: none;
+      }
+
+      &__info {
+        grid-template-columns: repeat(1, 1fr);
+        text-align: center;
+        gap: 0;
+        display: flex;
+        flex-direction: column-reverse;
+
+        &-address {
+          text-align: center;
+        }
+      }
+
+      &__arrow {
+        display: none;
+      }
+    }
+  }
+}

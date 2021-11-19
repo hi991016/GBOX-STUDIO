@@ -87,3 +87,15 @@ backTop.addEventListener("click", function () {
     behavior: "smooth",
   });
 });
+
+/* ---------------------------- CUSTOM SCROLLBAR ---------------------------- */
+window.addEventListener("load", () => {
+  const scrollBar = document.querySelector(".scrollbar");
+  window.addEventListener("scroll", function () {
+    let scrollY = window.pageYOffset;
+    const height =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
+    scrollBar.style.width = (scrollY / height) * 100 + "%";
+  });
+});

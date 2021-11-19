@@ -17,12 +17,16 @@ header {
       top: 0;
       z-index: 100;
       background: $gray-cl;
-      height: 72px;
+      height: var(--height-header);
       width: 100%;
     }
 
     &__wrap {
       height: 100%;
+    }
+
+    &__bottom {
+      background: $main-bg-cl;
     }
   }
 
