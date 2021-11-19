@@ -1,6 +1,5 @@
-/* -------------------------------------------------------------------------- */
-/*                        SHOW MENU HEADER WHEN SCROLL                        */
-/* -------------------------------------------------------------------------- */
+/* ---------------------- SHOW MENU HEADER WHEN SCROLL ---------------------- */
+
 window.addEventListener("scroll", () => {
   //   Get the position when I scroll to
   let scrollPos = document.querySelector("html").scrollTop;
@@ -27,9 +26,8 @@ window.addEventListener("scroll", () => {
   }
 });
 
-/* -------------------------------------------------------------------------- */
-/*                              MENU SHOW/HIDDEN                              */
-/* -------------------------------------------------------------------------- */
+/* ---------------------------- MENU SHOW/HIDDEN ---------------------------- */
+
 const navMenu = document.getElementById("nav-menu"),
   navToggle = document.querySelector(".btn-menu");
 
@@ -45,9 +43,8 @@ window.addEventListener("resize", function (e) {
   }
 });
 
-/* -------------------------------------------------------------------------- */
-/*                               HOVER MENU LINK                              */
-/* -------------------------------------------------------------------------- */
+/* ----------------------------- HOVER MENU LINK ---------------------------- */
+
 $(".nav a").hover(
   function () {
     //  mouseenter
@@ -69,3 +66,24 @@ $(".nav a").hover(
     $(".nav a").removeClass("is-not-hover");
   }
 );
+
+/* ------------------------------- ACTIVE TAB ------------------------------- */
+
+$(".project__tab a").on("click", function (e) {
+  e.preventDefault();
+  $(this).addClass("active").siblings().removeClass("active");
+
+  let current_tab = $(this).attr("data-list");
+  $(".project .grid").hide();
+  $("." + current_tab).show();
+});
+
+/* ------------------------------- BACK TO TOP ------------------------------ */
+
+let backTop = document.querySelector(".back-to-top");
+backTop.addEventListener("click", function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});

@@ -143,4 +143,50 @@ footer {
       }
     }
   }
+
+  @include maxW(576px) {
+    padding-top: 40px;
+
+    .footer {
+      &__top {
+        grid-template-columns: repeat(1, 1fr);
+        padding-bottom: 0;
+
+        &-info {
+          text-align: center;
+          line-height: var(--body20-lh);
+
+          .tel {
+            margin-top: 0;
+          }
+
+          p {
+            margin-top: 0;
+          }
+        }
+
+        &-desc {
+          display: none;
+        }
+      }
+
+      &__bottom {
+        height: auto;
+        background: transparent;
+        text-align: center;
+        padding-top: 0;
+
+        &-form {
+          display: none;
+        }
+
+        .copyright {
+          margin-top: 30px;
+          background: $yellow-cl;
+          min-height: 245px;
+          padding-top: 50px;
+        }
+      }
+    }
+  }
 }

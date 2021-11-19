@@ -39,12 +39,11 @@ header {
   .icon-fb {
     img {
       width: 15px;
-      height: 22px;
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
       right: 15px;
-      height: 19px;
+      height: 20px;
     }
   }
 
@@ -149,6 +148,9 @@ header {
   }
 
   @include maxW(576px) {
+    margin-bottom: unset;
+    height: 110px;
+
     .menu {
       display: none;
     }
@@ -159,6 +161,10 @@ header {
 
     .icon-fb {
       display: block !important;
+
+      img {
+        height: 25px !important;
+      }
     }
   }
 

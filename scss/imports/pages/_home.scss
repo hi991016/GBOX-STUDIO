@@ -1,4 +1,8 @@
 // CSS HOMEPAGE
+body {
+  overflow-x: hidden;
+}
+
 .home {
   .introduce {
     text-align: center;
@@ -61,7 +65,7 @@
           $gray-s-cl,
           uppercase
         );
-        padding: 20px;
+        padding: 0 20px;
         @include transition(color 0.5s ease);
 
         &.active {
@@ -188,6 +192,53 @@
           img {
             top: 5px;
           }
+        }
+      }
+    }
+  }
+
+  @include maxW(320px) {
+  }
+
+  @include maxW(576px) {
+    .introduce {
+      &__desc,
+      span {
+        display: none;
+      }
+
+      &__title {
+        margin-bottom: unset;
+      }
+    }
+
+    .project {
+      padding-top: 35px;
+
+      &__tab {
+        display: none;
+      }
+
+      &__list {
+        grid-template-columns: repeat(1, 1fr);
+
+        .project__item {
+          padding-bottom: 30px;
+          &-title,
+          &-desc {
+            font-size: var(--body14-fs);
+            line-height: var(--body14-lh);
+          }
+        }
+
+        &.tab-all.tab-image {
+          display: none;
+        }
+      }
+
+      &__all {
+        a {
+          padding: 55px 15px 0;
         }
       }
     }
