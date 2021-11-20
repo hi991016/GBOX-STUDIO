@@ -151,7 +151,7 @@ header {
     }
   }
 
-  @include maxW(576px) {
+  @include maxW(576px and 766px) {
     margin-bottom: unset;
     height: 110px;
 

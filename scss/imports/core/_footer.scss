@@ -90,7 +90,7 @@ footer {
             top: -3px;
             position: relative;
             line-height: 32px;
-            background: url(/img/bg-contact.png) center no-repeat;
+            background-size: contain !important;
             color: $text-cl;
           }
         }
@@ -150,7 +150,7 @@ footer {
     }
   }
 
-  @include maxW(576px) {
+  @include maxW(576px and 767px) {
     padding-top: 40px;
 
     .footer {

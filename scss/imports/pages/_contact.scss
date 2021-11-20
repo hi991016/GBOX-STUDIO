@@ -124,7 +124,7 @@
     }
   }
 
-  @include maxW(576px) {
+  @include maxW(576px and 767px) {
     header {
       height: var(--height-header);
     }

@@ -61,7 +61,7 @@
     }
   }
 
-  @include maxW(576px) {
+  @include maxW(576px and 767px) {
     header {
       height: var(--height-header);
     }
@@ -74,13 +74,14 @@
         justify-content: unset;
         &-desc {
           font-size: 16px;
+          padding: 0 25px;
         }
         &-title {
           font-size: 28px;
           padding-top: 50px;
         }
         &-book {
-          display: none;
+          padding: 0 25px;
         }
       }
     }

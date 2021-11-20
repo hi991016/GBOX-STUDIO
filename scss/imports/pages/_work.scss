@@ -14,7 +14,7 @@
         text-align: center;
         @include text(
           var(--body12-fs),
-          pr,
+          psb,
           var(--body12-lh),
           $text-cl,
           uppercase
@@ -57,7 +57,7 @@
     }
   }
 
-  @include maxW(576px) {
+  @include maxW(576px and 767px) {
     footer {
       padding-top: 150px;
     }

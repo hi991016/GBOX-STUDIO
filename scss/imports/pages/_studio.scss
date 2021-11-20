@@ -1,0 +1,224 @@
+.studiopage {
+  .studio {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 70px 20px;
+    }
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      &-img {
+        height: 0;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        padding-bottom: 65.6%;
+
+        img {
+          @include midimg();
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background: #202020;
+          opacity: 0.7;
+          z-index: 2;
+          @include transition(all 0.6s);
+          pointer-events: none;
+          user-select: none;
+        }
+      }
+
+      &-details {
+        grid-template-columns: 24% 76%;
+        height: 120px;
+        .name {
+          p {
+            height: 100%;
+            max-width: 120px;
+            background: $yellow-cl;
+            text-align: center;
+            @include text(
+              var(--body12-fs),
+              pr,
+              var(--body12-lh),
+              $text-cl,
+              uppercase
+            );
+            padding: 20px;
+
+            span {
+              display: block;
+              font-size: 60px;
+              font-family: din;
+              margin-top: 18px;
+            }
+          }
+        }
+
+        .info {
+          height: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding-left: 75px;
+          padding-right: 30px;
+          background: $main-bg-cl;
+          @include transition(all 0.6s);
+
+          &-dimension {
+            @include text(
+              var(--body12-fs),
+              pr,
+              var(--body12-lh),
+              $text-cl,
+              uppercase
+            );
+            @include transition(all 0.6s);
+          }
+
+          &-icon {
+            @include mid(true);
+            flex-direction: column;
+            a {
+              @include text(
+                var(--body12-fs),
+                psb,
+                var(--body12-lh),
+                $text-cl,
+                uppercase
+              );
+              @include transition(all 0.6s);
+            }
+
+            .arrow {
+              @include transition(0.5s transform);
+            }
+          }
+        }
+      }
+
+      &:hover {
+        .studio__item-img::before {
+          opacity: 0;
+        }
+
+        .info {
+          background: $gray-cl;
+          color: $white-cl;
+
+          &-dimension {
+            color: $white-cl;
+          }
+
+          &-icon {
+            a {
+              color: $white-cl;
+            }
+            .arrow {
+              fill: $yellow-cl;
+              animation-play-state: running;
+              @include transform(translateY(30%));
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include maxW(576px and 767px) {
+    .studio {
+      &__list {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 40px;
+      }
+
+      &__item {
+        &-details {
+          height: 75px;
+          grid-template-columns: 19% 81%;
+
+          .name {
+            p {
+              max-width: 75px;
+              padding: 10px;
+
+              span {
+                font-size: 38.38px;
+                margin-top: 5px;
+              }
+            }
+          }
+
+          .info {
+            padding-left: 25px;
+            padding-right: 0;
+
+            &-icon {
+              a {
+                display: none;
+              }
+
+              .arrow {
+                transform: rotate(-90deg);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include maxW(320px) {
+    .studio__item-details {
+      grid-template-columns: 23% 77%;
+    }
+  }
+
+  @include maxW(768px) {
+    .studio {
+      &__list {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 40px;
+      }
+
+      &__item {
+        &-details {
+          height: 75px;
+          grid-template-columns: 19% 81%;
+
+          .name {
+            p {
+              max-width: 75px;
+              padding: 10px;
+
+              span {
+                font-size: 38.38px;
+                margin-top: 5px;
+              }
+            }
+          }
+
+          .info {
+            padding-left: 25px;
+          }
+        }
+      }
+    }
+  }
+
+  @include maxW(991px) {
+    .studio {
+      &__item {
+        &-details {
+          .info {
+            padding-left: 20px;
+          }
+        }
+      }
+    }
+  }
+}

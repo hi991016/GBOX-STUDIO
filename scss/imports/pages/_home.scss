@@ -47,7 +47,7 @@ body {
       display: block;
       margin: auto;
       max-width: 320px;
-      height: 2px;
+      height: 1px;
       background: $text-cl;
     }
   }
@@ -147,6 +147,7 @@ body {
         display: flex;
         align-items: center;
         flex-direction: column;
+        @include text(var(--body12-fs), psb, var(--body12-lh), $text-cl, none);
         span {
           font-style: italic;
         }
@@ -170,7 +171,7 @@ body {
       a {
         @include text(
           var(--body12-fs),
-          pr,
+          psb,
           var(--body12-lh),
           $text-cl,
           uppercase
@@ -201,7 +202,7 @@ body {
   @include maxW(320px) {
   }
 
-  @include maxW(576px) {
+  @include maxW(576px and 766px) {
     .introduce {
       &__desc,
       span {
@@ -227,7 +228,7 @@ body {
           padding-bottom: 30px;
           &-title,
           &-desc {
-            font-size: var(--body14-fs);
+            font-size: var(--body12-fs);
             line-height: var(--body14-lh);
           }
         }
