@@ -1,0 +1,85 @@
+.workpage {
+  .project {
+    padding-top: 0;
+  }
+
+  .work {
+    &__more {
+      display: flex;
+      position: relative;
+      justify-content: flex-end;
+
+      &-icon {
+        @include mid();
+        text-align: center;
+        @include text(
+          var(--body12-fs),
+          pr,
+          var(--body12-lh),
+          $text-cl,
+          uppercase
+        );
+        display: block;
+        padding: 15px 0;
+        margin: auto;
+        max-width: 100px;
+
+        img {
+          position: relative;
+          top: 0;
+          padding-top: 10px;
+          display: block;
+          margin: auto;
+          @include transition(all 0.4s);
+        }
+
+        &:hover {
+          img {
+            top: 5px;
+          }
+        }
+      }
+
+      .btn-box:hover {
+        background: $black-cl !important;
+      }
+
+      &-book {
+        display: flex;
+        flex-direction: row-reverse;
+        padding-top: 44px;
+        p {
+          margin-right: 20px;
+          max-width: 100px;
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  @include maxW(576px) {
+    footer {
+      padding-top: 150px;
+    }
+
+    .work {
+      &__more {
+        &-icon {
+          top: 150%;
+        }
+
+        &-book {
+          flex-direction: column-reverse;
+          width: 100%;
+          align-items: center;
+
+          p {
+            margin-right: 0;
+            margin-bottom: 5px;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}

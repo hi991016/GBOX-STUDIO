@@ -24,13 +24,19 @@ a {
   color: $black-cl;
 }
 .--yellow-cl {
-  color: $yellow-cl;
+  color: $yellow-cl !important;
+}
+.--gray-cl {
+  color: $gray-cl;
 }
 .--text-cl {
   color: $text-cl;
 }
 .--bg-yellow-cl {
   background: $yellow-cl;
+}
+.--bg-gray-cl {
+  background: $gray-cl !important;
 }
 
 // css article (nội dung chi tiết bài viết)
