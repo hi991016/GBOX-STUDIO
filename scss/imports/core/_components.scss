@@ -23,6 +23,15 @@ a {
 .--black-cl {
   color: $black-cl;
 }
+.--yellow-cl {
+  color: $yellow-cl;
+}
+.--text-cl {
+  color: $text-cl;
+}
+.--bg-yellow-cl {
+  background: $yellow-cl;
+}
 
 // css article (nội dung chi tiết bài viết)
 article {
@@ -136,4 +145,15 @@ article {
 // hide scrollbar default
 ::-webkit-scrollbar {
   width: 0;
+}
+
+/* --------------------------------- BTN BOX -------------------------------- */
+.btn-box {
+  max-width: 100px;
+  @include text(24px, peb, 30.48px, $text-cl, uppercase);
+  border-radius: 8px;
+  text-align: center;
+  min-height: 100px;
+  @include mid(true);
+  @include transition(all 0.4s);
 }

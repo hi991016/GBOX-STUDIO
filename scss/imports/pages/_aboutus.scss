@@ -1,0 +1,96 @@
+.aboutpage {
+  header {
+    margin-bottom: 0;
+    .header__bottom {
+      .nav {
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+
+  footer {
+    padding-top: 0;
+    .footer {
+      &__top {
+        border-top: unset;
+      }
+    }
+  }
+
+  .about {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    &__info {
+      min-height: 640px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: start;
+      gap: 20px;
+      max-width: 900px;
+
+      &-title {
+        @include text(36px, pb, 58px, $yellow-cl, uppercase);
+        letter-spacing: 21.6px;
+        max-width: 280px;
+      }
+
+      &-desc {
+        @include text(18px, pr, 40px, $white-cl, none);
+        letter-spacing: 0.72px;
+      }
+
+      &-book {
+        display: flex;
+        margin-top: 30px;
+
+        p {
+          margin-left: 20px;
+          max-width: 100px;
+          @include text(var(--body14-fs), pr, var(--body14-lh), #e4e4e4, none);
+        }
+
+        .btn-box:hover {
+          background: $white-cl;
+        }
+      }
+    }
+  }
+
+  @include maxW(576px) {
+    header {
+      height: var(--height-header);
+    }
+
+    .about {
+      background-position: 74%;
+      &__info {
+        gap: 10px;
+        min-height: 900px;
+        justify-content: unset;
+        &-desc {
+          font-size: 16px;
+        }
+        &-title {
+          font-size: 28px;
+          padding-top: 50px;
+        }
+        &-book {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @include maxW(320px) {
+    .about {
+      &__info {
+        padding-bottom: 50px;
+      }
+    }
+  }
+}
