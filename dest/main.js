@@ -88,19 +88,6 @@ backTop.addEventListener("click", function () {
   });
 });
 
-/* ---------------------------- CUSTOM SCROLLBAR ---------------------------- */
-
-window.addEventListener("load", () => {
-  const scrollBar = document.querySelector(".scrollbar");
-  window.addEventListener("scroll", function () {
-    let scrollY = window.pageYOffset;
-    const height =
-      document.documentElement.scrollHeight -
-      document.documentElement.clientHeight;
-    scrollBar.style.width = (scrollY / height) * 100 + "%";
-  });
-});
-
 /* ------------------------------ PHOTOSWIPE JS ----------------------------- */
 
 var initPhotoSwipeFromDOM = function (gallerySelector) {
@@ -289,12 +276,8 @@ var openPhotoSwipe = function () {
   gallery.init();
 };
 
-$(window).on("load", function () {
-  initPhotoSwipeFromDOM(".workdetails__img");
-  document.querySelector(".btn-fullscreen").onclick = openPhotoSwipe;
-});
+/* -------------------------------- FLICKITY -------------------------------- */
 
-// flicky work details
 let $carosuel = $(".workdetails__img").flickity({
   cellAlign: "left",
   contain: true,
@@ -306,4 +289,30 @@ let $carosuel = $(".workdetails__img").flickity({
 let backToAll = $(".btn-back");
 backToAll.click(function () {
   $(".workdetails__img").flickity("select", 0);
+});
+
+/* -------------------------------------------------------------------------- */
+/*                                WINDOW LOADER                               */
+/* -------------------------------------------------------------------------- */
+
+$(window).on("load", function () {
+  /* ------------------------------ LOADING PAGE ------------------------------ */
+  $(".loading").fadeOut();
+  // setTimeout(() => {
+  //   $(".loading").fadeOut();
+  // }, 1000);
+
+  /* ---------------------------- CUSTOM SCROLL BAR --------------------------- */
+  const scrollBar = document.querySelector(".scrollbar");
+  window.addEventListener("scroll", function () {
+    let scrollY = window.pageYOffset;
+    const height =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
+    scrollBar.style.width = (scrollY / height) * 100 + "%";
+  });
+
+  /* ------------------------------- PHOTOSWIPE ------------------------------- */
+  initPhotoSwipeFromDOM(".workdetails__img");
+  document.querySelector(".btn-fullscreen").onclick = openPhotoSwipe;
 });
