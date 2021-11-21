@@ -277,7 +277,7 @@ var openPhotoSwipe = function () {
 };
 
 /* -------------------------------- FLICKITY -------------------------------- */
-
+// WORK DETAILS
 let $carosuel = $(".workdetails__img").flickity({
   cellAlign: "left",
   contain: true,
@@ -289,6 +289,22 @@ let $carosuel = $(".workdetails__img").flickity({
 let backToAll = $(".btn-back");
 backToAll.click(function () {
   $(".workdetails__img").flickity("select", 0);
+});
+
+// CAFE
+$(".cafe__container").flickity({
+  cellAlign: "left",
+  contain: true,
+  prevNextButtons: false,
+  wrapAround: true,
+  lazyLoad: true,
+});
+let $carousel_cafe = $(".cafe__container");
+$(".cafe__btn-pre").on("click", function () {
+  $carousel_cafe.flickity("previous");
+});
+$(".cafe__btn-next").on("click", function () {
+  $carousel_cafe.flickity("next");
 });
 
 /* -------------------------------------------------------------------------- */
@@ -313,6 +329,6 @@ $(window).on("load", function () {
   });
 
   /* ------------------------------- PHOTOSWIPE ------------------------------- */
-  initPhotoSwipeFromDOM(".workdetails__img");
+  initPhotoSwipeFromDOM(".workdetails__img, .carousel-img");
   document.querySelector(".btn-fullscreen").onclick = openPhotoSwipe;
 });

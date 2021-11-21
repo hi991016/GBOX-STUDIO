@@ -95,6 +95,8 @@
 
       .flickity-button {
         display: none;
+        background: transparent;
+        color: $white-cl;
       }
 
       &:hover {

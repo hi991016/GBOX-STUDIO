@@ -163,7 +163,13 @@
               }
 
               .arrow {
-                transform: rotate(-90deg);
+                @include transform(rotate(-90deg));
+              }
+            }
+
+            &:hover {
+              .arrow {
+                @include transform(rotate(-90deg) translateY(0));
               }
             }
           }

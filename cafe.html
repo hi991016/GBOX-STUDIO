@@ -1,14 +1,408 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Cafe</title>
+    <link rel="icon" href="favicon.ico">
+    <meta name="title" content="" />
+    <meta name="description" content="" />
+
+    <!-- meta facebook -->
+    <meta property="og:locale" content="vi" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:image" content="" />
+
+    <link rel="stylesheet" href="dest/style.min.css">
+    <link rel="stylesheet" href="dest/fonts.css">
 </head>
 
-<body>
+<!-- Mỗi body của mỗi page nên có class ví dụ homepage, aboutpage, contactpage... -->
+
+<body class="cafepage">
+    <!-- LOADING -->
+    <div class="loading-main"></div>
+    <!-- CUSTOM SCROLLBAR -->
+    <div class="scrollbar"></div>
+
+    <!-- HEADER -->
+    <header>
+        <div class="header__top">
+            <div class="container">
+                <div class="header__wrap">
+                    <div class="btn-menu">
+                        <span></span>
+                    </div>
+                    <a href="index.html" class="logo">
+                        <img src="./img/logo.svg" alt="">
+                    </a>
+                    <a href="https://www.facebook.com/GBOX-Studio-Coffee-586986754712909/" class="icon-fb">
+                        <img src="img/facebook.svg" alt="">
+                    </a>
+
+                    <div class="menu">
+                        <a href="aboutus.html">About</a>
+                        <ul class="menu__list">
+                            <li><a href="studio.html">Studio</a></li>
+                            <li><a href="rental.html">Rental</a></li>
+                            <li><a href="index.html" class="menu__logo">
+                                    <div class="logo">
+                                        <img src="img/logo.svg" alt="">
+                                    </div>
+                                </a></li>
+                            <li><a href="cafe.html">Cafe</a></li>
+                            <li><a href="work.html">Work</a></li>
+                        </ul>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NAV -->
+            <div class="header__bottom">
+                <div class="container">
+                    <nav id="nav-menu">
+                        <div class="nav">
+                            <a href="aboutus.html"><span>About</span></a>
+                            <ul class="nav__list">
+                                <li><a href="studio.html"><span>Studio</span></a></li>
+                                <li><a href="rental.html"><span>Rental</span></a></li>
+                                <li><a href="cafe.html"><span>Cafe</span></a></li>
+                                <li><a href="work.html"><span>Work</span></a></li>
+                            </ul>
+                            <a href="contact.html"><span>Contact</span></a>
+                        </div>
+                        <div class="info">
+                            <div class="info-item">
+                                <a href="#">info@goldenboxstudios.com</a>
+                            </div>
+                            <div class="info-item">
+                                <a href="#">Tel <span>+84 979 872 809</span></a>
+                            </div>
+                            <ul class="social">
+                                <li class="social-item">
+                                    <a href="#">
+                                        <span class="icon">
+                                            <img src="./img/linkedin.svg" alt="">
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="social-item">
+                                    <a href="#">
+                                        <span class="icon">
+                                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                viewBox="0 0 21.57 56.69" style="enable-background:new 0 0 21.57 56.69;"
+                                                xml:space="preserve" width="30px" height="30px">
+                                                <path
+                                                    d="M22.45,21.74H14.8v-5.01c0-1.88,1.25-2.32,2.13-2.32c0.88,0,5.4,0,5.4,0V6.12L14.9,6.1c-8.25,0-10.12,6.17-10.12,10.12v5.52
+                                                 H0v8.53h4.77c0,10.95,0,24.14,0,24.14H14.8c0,0,0-13.32,0-24.14h6.77L22.45,21.74z" />
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="social-item">
+                                    <a href="#">
+                                        <span class="icon">
+                                            <img src="./img/instagram.svg" alt="">
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main class="mainwrapper">
+        <section class="cafe">
+            <div class="cafe__info" style="background-image: url(img/cafe.jpg);">
+                <div class="container">
+                    <div class="introduce">
+                        <div class="welcome">
+                            <p>welcome to</p>
+                        </div>
+                        <h2>Gbox coffee</h2>
+                        <p class="desc">
+                            GBOX STUDIOS aim is to create a full service offering clients the highest quality of work
+                            with a comprehensive understanding of modern production, our services include advertising,
+                            products, automotive, portraits, beauty, editorial photography and video production. Gbox
+                            brand mark was inspired by the brand name and the lens.
+                        </p>
+                        <span class="line"></span>
+                        <h2 class="gallery">gallery</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cafe__gallery">
+                <div class="container">
+                    <div class="cafe__container">
+                        <div class="carousel-img grid" itemscope data-pswp-uid="1">
+                            <figure class="image img1">
+                                <a href="img/img-cafe-1.jpg" data-size="320x502">
+                                    <img src="img/img-cafe-1.jpg" alt="">
+
+                                    <div class="btn-full">
+                                        <img src="img/fullscreen.svg" alt="">
+                                        <p>Full screen</p>
+                                    </div>
+                                </a>
+                            </figure>
+                            <figure class="image img2">
+                                <a href="img/img-cafe-2.jpg" data-size="640x240">
+                                    <img src="img/img-cafe-2.jpg" alt="">
+                                    <div class="btn-full">
+                                        <img src="img/fullscreen.svg" alt="">
+                                        <p>Full screen</p>
+                                    </div>
+                                </a>
+                            </figure>
+                            <figure class="image img3">
+                                <a href="img/img-cafe-3.jpg" data-size="312x240">
+                                    <img src="img/img-cafe-3.jpg" alt="">
+                                    <div class="btn-full">
+                                        <img src="img/fullscreen.svg" alt="">
+                                        <p>Full screen</p>
+                                    </div>
+                                </a>
+                            </figure>
+                            <figure class="image img4">
+                                <a href="img/img-cafe-4.jpg" data-size="312x240">
+                                    <img src="img/img-cafe-4.jpg" alt="">
+                                    <div class="btn-full">
+                                        <img src="img/fullscreen.svg" alt="">
+                                        <p>Full screen</p>
+                                    </div>
+                                </a>
+                            </figure>
+                        </div>
+
+                        <div class="carousel-img grid" itemscope data-pswp-uid="2">
+                            <figure class="image img1">
+                                <a href="img/img-cafe-5-large.jpg" data-size="1280x1706">
+                                    <img src="img/img-cafe-5.jpg" alt="">
+                                    <div class="btn-full">
+                                        <img src="img/fullscreen.svg" alt="">
+                                        <p>Full screen</p>
+                                    </div>
+                                </a>
+                            </figure>
+                            <figure class="image img2">
+                                <a href="img/img-cafe-6-large.jpg" data-size="1280x1600">
+                                    <img src="img/img-cafe-6.jpg" alt="">
+                                    <div class="btn-full">
+                                        <img src="img/fullscreen.svg" alt="">
+                                        <p>Full screen</p>
+                                    </div>
+                                </a>
+                            </figure>
+                            <figure class="image img3">
+                                <a href="img/img-cafe-7-large.jpg" data-size="1280x853">
+                                    <img src="img/img-cafe-7.jpg" alt="">
+                                    <div class="btn-full">
+                                        <img src="img/fullscreen.svg" alt="">
+                                        <p>Full screen</p>
+                                    </div>
+                                </a>
+                            </figure>
+                            <figure class="image img4">
+                                <a href="img/img-cafe-8-large.jpg" data-size="1280x1920">
+                                    <img src="img/img-cafe-8.jpg" alt="">
+                                    <div class="btn-full">
+                                        <img src="img/fullscreen.svg" alt="">
+                                        <p>Full screen</p>
+                                    </div>
+                                </a>
+                            </figure>
+                        </div>
+                    </div>
+
+                    <div class="cafe__btn">
+                        <p class="cafe__btn-pre">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="12" height="12" x="0" y="0"
+                                viewBox="0 0 490.8 490.8" style="enable-background:new 0 0 512 512" xml:space="preserve"
+                                class="">
+                                <g
+                                    transform="matrix(-1,-9.797174393178826e-16,9.797174393178826e-16,-1,500.79998779296807,490.7997322082525)">
+                                    <path xmlns="http://www.w3.org/2000/svg" style=""
+                                        d="M135.685,3.128c-4.237-4.093-10.99-3.975-15.083,0.262c-3.992,4.134-3.992,10.687,0,14.82  l227.115,227.136L120.581,472.461c-4.237,4.093-4.354,10.845-0.262,15.083c4.093,4.237,10.845,4.354,15.083,0.262  c0.089-0.086,0.176-0.173,0.262-0.262l234.667-234.667c4.164-4.165,4.164-10.917,0-15.083L135.685,3.128z"
+                                        fill="#f44336" data-original="#f44336" class="" />
+                                    <path xmlns="http://www.w3.org/2000/svg"
+                                        d="M128.133,490.68c-5.891,0.011-10.675-4.757-10.686-10.648c-0.005-2.84,1.123-5.565,3.134-7.571l227.136-227.115  L120.581,18.232c-4.171-4.171-4.171-10.933,0-15.104c4.171-4.171,10.933-4.171,15.104,0l234.667,234.667  c4.164,4.165,4.164,10.917,0,15.083L135.685,487.544C133.685,489.551,130.967,490.68,128.133,490.68z"
+                                        fill="#ffde00" data-original="#000000" style="" class="" />
+                            </svg>
+                            <span>previous</span>
+                        </p>
+
+                        <div class="line"></div>
+
+                        <p class="cafe__btn-next">
+                            <span>next</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="12" height="12" x="0" y="0"
+                                viewBox="0 0 490.8 490.8" style="enable-background:new 0 0 512 512" xml:space="preserve"
+                                class="">
+                                <g transform="matrix(1,0,0,-1,9.999999999999943,490.7997322082525)">
+                                    <path xmlns="http://www.w3.org/2000/svg" style=""
+                                        d="M135.685,3.128c-4.237-4.093-10.99-3.975-15.083,0.262c-3.992,4.134-3.992,10.687,0,14.82  l227.115,227.136L120.581,472.461c-4.237,4.093-4.354,10.845-0.262,15.083c4.093,4.237,10.845,4.354,15.083,0.262  c0.089-0.086,0.176-0.173,0.262-0.262l234.667-234.667c4.164-4.165,4.164-10.917,0-15.083L135.685,3.128z"
+                                        fill="#f44336" data-original="#f44336" class="" />
+                                    <path xmlns="http://www.w3.org/2000/svg"
+                                        d="M128.133,490.68c-5.891,0.011-10.675-4.757-10.686-10.648c-0.005-2.84,1.123-5.565,3.134-7.571l227.136-227.115  L120.581,18.232c-4.171-4.171-4.171-10.933,0-15.104c4.171-4.171,10.933-4.171,15.104,0l234.667,234.667  c4.164,4.165,4.164,10.917,0,15.083L135.685,487.544C133.685,489.551,130.967,490.68,128.133,490.68z"
+                                        fill="#ffde00" data-original="#000000" style="" class="" />
+                                </g>
+                            </svg>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cafe__career">
+                <h2>
+                    career
+                </h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut lacus a sapien ullamcorper auctor et
+                    at magna. Pellentesque et mauris ac urna luctus suscipit quis sit amet neque. Donec at enim justo.
+                    Etiam interdum arcu lacus, sed pharetra nisi accumsan quis. Nunc facilisis varius risus aliquet
+                    sodales.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer__top grid">
+                <div class="footer__top-info">
+                    <h3>EMAIL</h3>
+                    <p>infogoldenboxstudios.com</p>
+                    <p class="tel">tel<span>+84 979 872 809</span></p>
+                </div>
+                <div class="footer__top-desc">
+                    If you have any questions,</br> comments or</br>
+                    suggestions, feel free to email</br> us or
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 footer__bottom-address">
+                        <h3>ADDRESS</h3>
+                        <p>04 bau cat district tan binh</p>
+                        <p>ho chi minh city</p>
+                    </div>
+                    <div class="col-md-6 footer__bottom-contact">
+                        <div class="footer__top-desc">
+                            If you have any questions,</br> comments or</br>
+                            suggestions, feel free to email</br> us or
+                        </div>
+                    </div>
+                    <div class="col-md-6 footer__bottom-form">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="field">
+                                    <label>Your Name</label>
+                                    <input type="text" id="name">
+                                    <p class="mess mess-name">
+                                        Vui long nhap ho ten
+                                    </p>
+                                </div>
+                                <div class="field">
+                                    <label>Phone</label>
+                                    <input type="text" id="phone">
+                                    <p class="mess mess-name">
+                                        Vui long nhap so dien thoai
+                                    </p>
+                                </div>
+                                <div class="field">
+                                    <label>Email</label>
+                                    <input type="text" id="email">
+                                    <p class="mess mess-name">
+                                        Vui long nhap email
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="field">
+                                    <label>Subject</label>
+                                    <input type="text" id="subject">
+                                </div>
+                                <div class="field">
+                                    <label>Message</label>
+                                    <textarea id="message"
+                                        style="background: url(/img/bg-contact.png) center no-repeat;"></textarea>
+                                </div>
+                                <div class="field-btn">
+                                    <div class="btn-send">
+                                        <span>SEND</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <img src="./img/arrow-to-top.svg" alt="" class="back-to-top">
+                <p>© 2021 GBOX STUDIO. All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- PHOTOSWIPE JS -->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div>
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                    <button class="pswp__button pswp__button--share" title="Share"></button>
+                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div>
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                </button>
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                </button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="dest/jsmain.min.js"></script>
+    <script type="text/javascript" src="dest/main.js"></script>
 
 </body>
 
