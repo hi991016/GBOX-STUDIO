@@ -1,14 +1,326 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Work Details</title>
+    <link rel="icon" href="favicon.ico">
+    <meta name="title" content="" />
+    <meta name="description" content="" />
+
+    <!-- meta facebook -->
+    <meta property="og:locale" content="vi" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:image" content="" />
+
+    <link rel="stylesheet" href="dest/style.min.css">
+    <link rel="stylesheet" href="dest/fonts.css">
 </head>
 
-<body>
+<!-- Mỗi body của mỗi page nên có class ví dụ homepage, aboutpage, contactpage... -->
+
+<body class="workdetailspage">
+    <!-- LOADING -->
+    <div class="loading"></div>
+    <!-- CUSTOM SCROLLBAR -->
+    <div class="scrollbar"></div>
+
+    <!-- HEADER -->
+    <header>
+        <div class="header__top">
+            <div class="container">
+                <div class="header__wrap">
+                    <div class="btn-menu">
+                        <span></span>
+                    </div>
+                    <a href="index.html" class="logo">
+                        <img src="./img/logo.svg" alt="">
+                    </a>
+                    <a href="https://www.facebook.com/GBOX-Studio-Coffee-586986754712909/" class="icon-fb">
+                        <img src="img/facebook.svg" alt="">
+                    </a>
+
+                    <div class="menu">
+                        <a href="aboutus.html">About</a>
+                        <ul class="menu__list">
+                            <li><a href="studio.html">Studio</a></li>
+                            <li><a href="rental.html">Rental</a></li>
+                            <li><a href="index.html" class="menu__logo">
+                                    <div class="logo">
+                                        <img src="img/logo.svg" alt="">
+                                    </div>
+                                </a></li>
+                            <li><a href="cafe.html">Cafe</a></li>
+                            <li><a href="work.html">Work</a></li>
+                        </ul>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NAV -->
+            <div class="header__bottom">
+                <div class="container">
+                    <nav id="nav-menu">
+                        <div class="nav">
+                            <a href="aboutus.html"><span>About</span></a>
+                            <ul class="nav__list">
+                                <li><a href="studio.html"><span>Studio</span></a></li>
+                                <li><a href="rental.html"><span>Rental</span></a></li>
+                                <li><a href="cafe.html"><span>Cafe</span></a></li>
+                                <li><a href="work.html"><span>Work</span></a></li>
+                            </ul>
+                            <a href="contact.html"><span>Contact</span></a>
+                        </div>
+                        <div class="info">
+                            <div class="info-item">
+                                <a href="#">info@goldenboxstudios.com</a>
+                            </div>
+                            <div class="info-item">
+                                <a href="#">Tel <span>+84 979 872 809</span></a>
+                            </div>
+                            <ul class="social">
+                                <li class="social-item">
+                                    <a href="#">
+                                        <span class="icon">
+                                            <img src="./img/linkedin.svg" alt="">
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="social-item">
+                                    <a href="#">
+                                        <span class="icon">
+                                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                viewBox="0 0 21.57 56.69" style="enable-background:new 0 0 21.57 56.69;"
+                                                xml:space="preserve" width="30px" height="30px">
+                                                <path
+                                                    d="M22.45,21.74H14.8v-5.01c0-1.88,1.25-2.32,2.13-2.32c0.88,0,5.4,0,5.4,0V6.12L14.9,6.1c-8.25,0-10.12,6.17-10.12,10.12v5.52
+                                                 H0v8.53h4.77c0,10.95,0,24.14,0,24.14H14.8c0,0,0-13.32,0-24.14h6.77L22.45,21.74z" />
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="social-item">
+                                    <a href="#">
+                                        <span class="icon">
+                                            <img src="./img/instagram.svg" alt="">
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main class="mainwrapper">
+        <section class="workdetails">
+            <div class="container">
+                <div class="workdetails__info">
+                    <h2>Project 01</h2>
+                    <div class="workdetails__info-btn">
+                        <div class="btn-fullscreen">
+                            <a href="#">Full Screen</a>
+                            <img src="img/fullscreen.svg" alt="">
+                        </div>
+                        <div class="btn-back">
+                            <a href="work.html">back to all</a>
+                            <svg class="arrow" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 43.4 23.26"
+                                xml:space="preserve" width="20px" height="20px" fill="#484647">
+                                <style type="text/css">
+                                </style>
+                                <polygon class="st0"
+                                    points="23.68,16.19 7.49,0 3.96,3.54 20.14,19.72 23.68,23.26 27.22,19.72 43.4,3.54 39.87,0 " />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="workdetails__img">
+                    <figure class="img image1">
+                        <a href="img/project-details.jpg" data-size="1000x556">
+                            <img src="img/project-details.jpg" alt="">
+                        </a>
+                    </figure>
+                    <figure class="img image2">
+                        <a href="img/std-detail-2.jpg" data-size="982x480">
+                            <img src="img//std-detail-2.jpg" alt="">
+                        </a>
+                    </figure>
+                    <figure class="img image3">
+                        <a href="img/std-detail-4.jpg" data-size="982x480">
+                            <img src="img/std-detail-4.jpg" alt="">
+                        </a>
+                    </figure>
+                </div>
+
+                <div class="workdetails__desc">
+                    <div class="workdetails__desc-info">
+                        <h2>DESCRIPTION</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                            ut ornare est, malesuada eleifend urna. Ut vel felis vel elit auctor efficitur. Nulla
+                            pellentesque vestibulum elit, at
+                            condimentum felis sollicitudin quis.</p>
+                    </div>
+
+                    <div class="workdetails__desc-client">
+                        <h2>CLIENT</h2>
+                        <p>Gucci</p>
+                    </div>
+
+                    <div class="workdetails__desc-about">
+                        <h2>ABOUT TEAM</h2>
+                        <div class="dop">
+                            <p>DOP: </p>
+                            <p>Yeen Yeen</p>
+                        </div>
+                        <div class="photogh">
+                            <p>Photographers : </p>
+                            <p>Eric Huynh</p>
+                        </div>
+                        <div class="director">
+                            <p>Art Director : </p>
+                            <p>Hoang Thanh</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer__top grid">
+                <div class="footer__top-info">
+                    <h3>EMAIL</h3>
+                    <p>infogoldenboxstudios.com</p>
+                    <p class="tel">tel<span>+84 979 872 809</span></p>
+                </div>
+                <div class="footer__top-desc">
+                    If you have any questions,</br> comments or</br>
+                    suggestions, feel free to email</br> us or
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 footer__bottom-address">
+                        <h3>ADDRESS</h3>
+                        <p>04 bau cat district tan binh</p>
+                        <p>ho chi minh city</p>
+                    </div>
+                    <div class="col-md-6 footer__bottom-contact">
+                        <div class="footer__top-desc">
+                            If you have any questions,</br> comments or</br>
+                            suggestions, feel free to email</br> us or
+                        </div>
+                    </div>
+                    <div class="col-md-6 footer__bottom-form">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="field">
+                                    <label>Your Name</label>
+                                    <input type="text" id="name">
+                                    <p class="mess mess-name">
+                                        Vui long nhap ho ten
+                                    </p>
+                                </div>
+                                <div class="field">
+                                    <label>Phone</label>
+                                    <input type="text" id="phone">
+                                    <p class="mess mess-name">
+                                        Vui long nhap so dien thoai
+                                    </p>
+                                </div>
+                                <div class="field">
+                                    <label>Email</label>
+                                    <input type="text" id="email">
+                                    <p class="mess mess-name">
+                                        Vui long nhap email
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="field">
+                                    <label>Subject</label>
+                                    <input type="text" id="subject">
+                                </div>
+                                <div class="field">
+                                    <label>Message</label>
+                                    <textarea id="message"
+                                        style="background: url(/img/bg-contact.png) center no-repeat;"></textarea>
+                                </div>
+                                <div class="field-btn">
+                                    <div class="btn-send">
+                                        <span>SEND</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <img src="./img/arrow-to-top.svg" alt="" class="back-to-top">
+                <p>© 2021 GBOX STUDIO. All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- PHOTOSWIPE JS -->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div>
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                    <button class="pswp__button pswp__button--share" title="Share"></button>
+                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div>
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                </button>
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                </button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="dest/jsmain.min.js"></script>
+    <script type="text/javascript" src="dest/main.js"></script>
 
 </body>
 
