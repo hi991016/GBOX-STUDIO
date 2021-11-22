@@ -155,11 +155,11 @@ article {
 
 /* --------------------------------- BTN BOX -------------------------------- */
 .btn-box {
-  max-width: 100px;
+  width: 100px;
   @include text(24px, peb, 30.48px, $text-cl, uppercase);
   border-radius: 8px;
   text-align: center;
-  min-height: 100px;
+  height: 100px;
   @include mid(true);
   @include transition(all 0.4s);
 }

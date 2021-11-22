@@ -1,0 +1,289 @@
+.rentalpage {
+  header {
+    margin-bottom: 0;
+  }
+
+  .rental {
+    &__container {
+      grid-template-columns: 260px 1fr;
+    }
+
+    &__info {
+      background: $gray-cl;
+      max-height: 640px;
+      padding-top: 70px;
+      padding-left: 20px;
+
+      &-studio {
+        width: 120px;
+        height: 120px;
+        background: $yellow-cl;
+        @include mid(true);
+        flex-direction: column;
+        margin-bottom: 30px;
+
+        p {
+          @include text(
+            var(--body12-fs),
+            pr,
+            var(--body12-lh),
+            $text-cl,
+            uppercase
+          );
+        }
+
+        .number {
+          @include text(61.46px, din, 55px, $text-cl, uppercase);
+        }
+      }
+
+      &-dimen {
+        h2 {
+          @include text(32px, peb, var(--body20-lh), $white-cl, capitalize);
+          margin-bottom: 10px;
+        }
+
+        span {
+          @include text(
+            var(--body12-fs),
+            pr,
+            var(--body20-lh),
+            $white-cl,
+            uppercase
+          );
+        }
+
+        p {
+          @include text(
+            var(--body14-fs),
+            pr,
+            var(--body14-lh),
+            $white-cl,
+            none
+          );
+        }
+      }
+    }
+
+    &__details {
+      padding-top: 70px;
+      padding-left: 50px;
+
+      h2 {
+        @include text(28px, peb, var(--body20-lh), $text-cl, none);
+        margin-bottom: 30px;
+      }
+
+      p {
+        @include text(var(--body12-fs), pr, var(--body12-lh), $text-cl, none);
+        margin-bottom: 5px;
+      }
+
+      input {
+        width: 225px;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid $text-cl;
+        margin-bottom: 30px;
+        height: 20px;
+      }
+
+      textarea {
+        margin-top: 18px;
+        height: 90px;
+        width: 225px;
+        resize: none;
+        background: $main-bg-cl;
+      }
+
+      &-company {
+        display: flex;
+        margin-bottom: 40px;
+
+        .company-item {
+          padding-right: 80px;
+        }
+      }
+
+      &-booking {
+        .studio-item {
+          display: flex;
+          gap: 20px;
+          margin-top: 15px;
+          margin-bottom: 35px;
+
+          .number {
+            width: 40px;
+            height: 40px;
+            background: #111;
+            @include text(24px, din, 40px, #b4b4b4, none);
+            vertical-align: middle;
+            text-align: center;
+            cursor: pointer;
+
+            &.active {
+              border: 1px solid #111;
+              background: $yellow-cl;
+              color: $text-cl;
+            }
+          }
+        }
+
+        .studio-requirement {
+          display: flex;
+
+          .requirement-item:first-child {
+            padding-right: 80px;
+          }
+        }
+
+        .studio-duration {
+          p {
+            margin-bottom: 15px;
+          }
+
+          .duration-item {
+            display: flex;
+
+            input {
+              height: 40px;
+              border: 1px solid $text-cl;
+              padding: 10px;
+              font-style: italic;
+            }
+
+            .arrow {
+              padding-right: 30px;
+              padding-left: 40px;
+              img {
+                width: 12px;
+                position: relative;
+                top: 12px;
+              }
+            }
+          }
+        }
+
+        .studio-reference {
+          .reference-item {
+            padding-right: 80px;
+          }
+          input {
+            height: 40px;
+            border: 1px solid $text-cl;
+            width: 100%;
+            margin-top: 15px;
+          }
+        }
+
+        .studio-submit {
+          margin-top: 40px;
+          display: flex;
+
+          p {
+            margin-left: 20px;
+            max-width: 185px;
+          }
+
+          .btn-box:hover {
+            background: $black-cl !important;
+          }
+        }
+      }
+    }
+  }
+
+  @include maxW(576px and 992px) {
+    header {
+      margin-bottom: 0;
+    }
+    .rental {
+      &__container {
+        grid-template-columns: 200px 1fr;
+        display: block;
+      }
+
+      &__info {
+        background: $main-bg-cl;
+        padding: 0;
+        display: flex;
+
+        &-studio {
+          margin-right: 30px;
+        }
+
+        &-dimen {
+          h2 {
+            margin-bottom: 0;
+          }
+
+          h2,
+          span,
+          p {
+            color: $text-cl;
+          }
+        }
+      }
+
+      &__details {
+        padding: 0;
+
+        &-company {
+          display: block;
+
+          .company-item {
+            padding-right: 0;
+
+            p,
+            input,
+            textarea {
+              width: 100%;
+            }
+          }
+        }
+
+        &-booking {
+          .studio-requirement {
+            display: block;
+            margin-bottom: 15px;
+
+            .requirement-item {
+              padding-right: 0;
+
+              textarea {
+                width: 100%;
+              }
+            }
+
+            .requirement-item:first-child {
+              padding-right: 0;
+              margin-bottom: 15px;
+            }
+          }
+
+          .reference-item {
+            padding-right: 0 !important;
+          }
+
+          .studio-submit {
+            p {
+              max-width: 150px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include maxW(576px) {
+    header {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  @include maxW(992px) {
+    header {
+      margin-bottom: 30px;
+    }
+  }
+}

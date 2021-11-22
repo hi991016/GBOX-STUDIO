@@ -277,7 +277,7 @@ var openPhotoSwipe = function () {
 };
 
 /* -------------------------------- FLICKITY -------------------------------- */
-// WORK DETAILS
+//  WORK DETAILS
 let $carosuel = $(".workdetails__img").flickity({
   cellAlign: "left",
   contain: true,
@@ -291,7 +291,7 @@ backToAll.click(function () {
   $(".workdetails__img").flickity("select", 0);
 });
 
-// CAFE
+//  CAFE
 $(".cafe__container").flickity({
   cellAlign: "left",
   contain: true,
@@ -305,6 +305,11 @@ $(".cafe__btn-pre").on("click", function () {
 });
 $(".cafe__btn-next").on("click", function () {
   $carousel_cafe.flickity("next");
+});
+
+/* -------------------------- RENTAL ONCICK NUMBER -------------------------- */
+$(".studio-item .number").on("click", function () {
+  $(this).addClass("active").siblings().removeClass("active");
 });
 
 /* -------------------------------------------------------------------------- */
