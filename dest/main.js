@@ -240,6 +240,7 @@ var initPhotoSwipeFromDOM = function (gallerySelector) {
 
 var openPhotoSwipe = function () {
   var pswpElement = document.querySelectorAll(".pswp")[0];
+  console.log('pswpElement', pswpElement)
   //  build items array
   var items = [
     {
@@ -263,10 +264,11 @@ var openPhotoSwipe = function () {
     //  history & focus options are disabled on CodePen
     history: false,
     focus: false,
-
     showAnimationDuration: 0,
     hideAnimationDuration: 0,
   };
+
+  // if ()
   var gallery = new PhotoSwipe(
     pswpElement,
     PhotoSwipeUI_Default,
@@ -307,6 +309,28 @@ $(".cafe__btn-next").on("click", function () {
   $carousel_cafe.flickity("next");
 });
 
+//  STUDIO DETAILS
+$(".studiodetails__img").flickity({
+  cellAlign: "left",
+  contain: true,
+  wrapAround: true,
+  prevNextButtons: true,
+  pageDots: false,
+  fullscreen: true,
+  lazyLoad: true,
+});
+let backToAllStudio = $(".btn-back");
+backToAllStudio.click(function () {
+  $(".studiodetails__img").flickity("select", 0);
+});
+let $carousel_studio = $(".studiodetails__img");
+$(".ctr-pre").on("click", function () {
+  $carousel_studio.flickity("previous");
+});
+$(".ctr-next").on("click", function () {
+  $carousel_studio.flickity("next");
+});
+
 /* -------------------------- RENTAL ONCICK NUMBER -------------------------- */
 $(".studio-item .number").on("click", function () {
   $(this).addClass("active").siblings().removeClass("active");
@@ -334,6 +358,8 @@ $(window).on("load", function () {
   });
 
   /* ------------------------------- PHOTOSWIPE ------------------------------- */
-  initPhotoSwipeFromDOM(".workdetails__img, .carousel-img");
+  initPhotoSwipeFromDOM(
+    ".workdetails__img, .carousel-img, .studiodetails__img"
+  );
   document.querySelector(".btn-fullscreen").onclick = openPhotoSwipe;
 });
