@@ -240,7 +240,7 @@ var initPhotoSwipeFromDOM = function (gallerySelector) {
 
 var openPhotoSwipe = function () {
   var pswpElement = document.querySelectorAll(".pswp")[0];
-  console.log('pswpElement', pswpElement)
+  console.log("pswpElement", pswpElement);
   //  build items array
   var items = [
     {
@@ -343,9 +343,9 @@ $(".studio-item .number").on("click", function () {
 $(window).on("load", function () {
   /* ------------------------------ LOADING PAGE ------------------------------ */
   $(".loading").fadeOut();
-  // setTimeout(() => {
-  //   $(".loading").fadeOut();
-  // }, 1000);
+  setTimeout(() => {
+    $(".loading-main").fadeOut();
+  }, 3400);
 
   /* ---------------------------- CUSTOM SCROLL BAR --------------------------- */
   const scrollBar = document.querySelector(".scrollbar");

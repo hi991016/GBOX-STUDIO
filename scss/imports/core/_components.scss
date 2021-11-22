@@ -211,4 +211,47 @@ article {
 
 /* ---------------------------- LOADING HOMEPAGE ---------------------------- */
 .loading-main {
+  background: $white-cl;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  height: 100vh;
+  width: 100%;
+
+  .bg-svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 12%;
+    transform: translate(-50%, -50%);
+
+    path {
+      stroke: $yellow-cl;
+      fill: $yellow-cl;
+      stroke-dasharray: 1200;
+      opacity: 10;
+      animation: animate 3s cubic-bezier(0, 0.23, 1, 0.1);
+    }
+    @keyframes animate {
+      0% {
+        opacity: 0;
+        fill: none;
+        stroke-dashoffset: 1200;
+      }
+      30% {
+        opacity: 10;
+        fill: none;
+        stroke-dashoffset: 1200;
+      }
+      90% {
+        fill: rgba($color: $yellow-cl, $alpha: 0);
+      }
+      100% {
+        opacity: 10;
+        fill: rgba($color: $yellow-cl, $alpha: 1);
+        stroke-dashoffset: 0;
+      }
+    }
+  }
 }
