@@ -31,7 +31,7 @@ nav {
       left: 50%;
       bottom: 0%;
       width: 100%;
-      height: 0.5px;
+      height: 1px;
       background: $black-cl;
       @include transform(translateX(-50%));
     }
@@ -131,7 +131,7 @@ nav {
             width: 100%;
             background: $black-cl;
             transform: scale(1);
-            height: 0.5px;
+            height: 1px;
             @include transition(0.5s ease-out);
           }
           &:hover {
